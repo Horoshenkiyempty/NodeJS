@@ -17,13 +17,13 @@ function start() {                                                       //Ин�
 var http = require("http");
 var url = require("url");
 
-function start(pathname, handle) {                                              //Инициалзации модуля
+function start(pathname) {                                              //Инициалзации модуля
     function onRequest(request, response) {
         var pathname = url.parse (request.url).pathname;
 	        console.log("Request for" + pathname + " received.");       //Вывод в консоль сообщения
 	        response.writeHead(200, {"Content-Type": "text/pain"});		//Заголовок ответа на запрос
 
-            route(handle, pathname);                                            //Вызов функции route
+            route(pathname);                                            //Вызов функции route
 
 	        response.write("Hello World");				                //Запрос на вывод сообщения
 	        response.end();						                        //Конец запроса
