@@ -23,9 +23,9 @@ function start(pathname, handle) {                                              
 	        console.log("Request for" + pathname + " received.");       //Вывод в консоль сообщения
 	        response.writeHead(200, {"Content-Type": "text/pain"});		//Заголовок ответа на запрос
 
-            route(handle, pathname);                                            //Вызов функции route
+            var content = route(handle, pathname);                                            //Вызов функции route
 
-	        response.write("Hello World");				                //Запрос на вывод сообщения
+	        response.write(content);				                //Запрос на вывод сообщения
 	        response.end();						                        //Конец запроса
     }
 
