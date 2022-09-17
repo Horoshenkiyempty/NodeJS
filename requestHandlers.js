@@ -6,13 +6,13 @@ function start(){
         while (new Date().getTime() < StartTime + MilliSeconds);
     }
     sleep(10000)
-    return "Hello Start!"
+    return "Hello Start!";
 }
 
 
 function upload(){
     console.log("Request handler 'upload' was called.");
-    return "Hello Update!"
+    return "Hello Update!";
 }
 
 exports.start = start;
